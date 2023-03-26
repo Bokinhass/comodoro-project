@@ -1,7 +1,7 @@
 # comodoro-project
 
-## Config and change basic infos 
+### Config and change basic infos 
 
-## Config global styles-components
+### Config global styles-components
 
-## Config global eslint 
+### Config global eslint 
