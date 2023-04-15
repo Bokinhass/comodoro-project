@@ -14,8 +14,6 @@ interface CyclesState {
   activeCycleId: string | null
 }
 
-
-
 export function cyclesReducer(state: CyclesState, action: any) {
   switch (action.type) {
     case ActionTypes.ADD_NEW_CYCLE:
@@ -24,6 +22,7 @@ export function cyclesReducer(state: CyclesState, action: any) {
         cycles: [...state.cycles, action.payload.newCycle],
         activeCycleId: action.payload.newCycle.id,
       }
+
     case ActionTypes.INTERRUPT_CURRENT_CYCLE:
       return {
         ...state,
@@ -36,6 +35,7 @@ export function cyclesReducer(state: CyclesState, action: any) {
         }),
         activeCycleId: null,
       }
+
     case ActionTypes.MARK_CURRENT_CYCLES_AS_FINISHED:
       return {
         ...state,
@@ -48,6 +48,7 @@ export function cyclesReducer(state: CyclesState, action: any) {
         }),
         activeCycleId: null,
       }
+
     default:
       return state
   }
